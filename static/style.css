@@ -1,0 +1,456 @@
+body{
+    font-family: 'Open Sans',helvetica,arial,sans-serif;
+    font-size: 1.0em;
+    margin: 10px;
+}
+
+.right_anch{ float: right; }
+
+/* for tab function */
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 32px; /*--Set height of tabs--*/
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    width: 100%;
+}
+
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 32px; /*--Set height of tabs--*/
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    width: 100%;
+}
+ul.tabs li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+    line-height: 31px; /*--Vertically aligns the text within the tab--*/
+    border: 1px solid #999;
+    border-left: none;
+    margin-bottom: -1px; /*--Pull the list item down 1px--*/
+    overflow: hidden;
+    position: relative;
+    background: #e0e0e0;
+}
+ul.tabs li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 0 20px;
+    /*--Gives the bevel look with a 1px white border inside the list item--*/
+    border: 1px solid #fff; 
+    outline: none;
+}
+ul.tabs li a:hover {
+    background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+     /*--Makes sure that the active tab does not listen to the hover properties--*/
+    background: #fff;
+    /*--Makes the active tab look like it's connected with its content--*/
+    border-bottom: 1px solid #fff; 
+}
+
+/*Tab Conent CSS*/
+.tab_container {
+    border: 1px solid #999;
+    border-top: none;
+    overflow: hidden;
+    clear: both;
+    float: left; 
+    width: 100%;
+    background: #fff;
+}
+
+a{
+    color:#2694E8;
+    text-decoration: none;
+}
+
+.right{
+    float: right;
+}
+a:hover{
+    color:#0580de;
+}
+
+#logo{
+    height: 30px;
+    margin-right: 20px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+
+.ib{
+    display: inline-block;
+    vertical-align: top;
+}
+.ml20{
+    margin-left: 20px;
+}
+.mr5{
+    margin-right: 5px;
+}
+
+.small{
+    font-size: 0.8em;
+}
+
+img.wait{
+    display: block;
+    margin: 10px auto;
+}
+
+div.overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+div.overlay div.info{
+    background-color: #ececec;
+    border: 2px solid #4c4c4c;
+    padding: 10px;
+    color: #2b2b2b;
+}
+div.overlay div.error{
+    background-color: #F44336;
+    border: 2px solid #C62828;
+    padding: 10px;
+    color: #fff;
+}
+
+div.overlay button{
+    display: block;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.sameRow {
+    margin: 10px;
+}
+
+h1{
+    background-color: #4CAF50;
+    color:#fff;
+    margin: -10px;
+    padding: 8px;
+    font-size: 1.0em;
+    border-bottom: 1px solid #999;
+    margin-bottom: 0px;
+}
+    
+div.breadcrumbs {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    background-color: #eee;
+    border: 1px solid #999;
+    border-top: none;
+    padding: 8px;
+    margin: 0px -10px;
+    margin-bottom: 6px;
+    font-size: 0.9em;
+}
+
+table.samples{
+    border-collapse: collapse;
+    
+}
+
+table.samples th{
+    border: 1px solid #999;
+    background-color: #B3E5FC;
+}
+
+table.samples td{
+    border: 1px solid #aaa;
+    text-align: right;
+    padding: 2px;
+}
+
+form{
+    padding: 10px;
+    margin: -6px -10px;
+    margin-bottom: 10px;
+    background-color: #616161;
+    color: #fff;
+}
+
+
+
+div.samples_list{
+    display: flex;
+    flex-wrap: wrap;
+    
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+div.samples_list div.sample{
+    flex-basis: 205px;
+    font-size: 0.8em;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    margin: 5px;
+}
+
+div.samples_list div.sample img{
+    display: block;
+    margin: 0px auto;
+}
+div.samples_list div.sample p{
+    margin: 0px;
+}
+
+
+table.results{ font-size: 0.9em; border-collapse: collapse; border: 1px solid #aaa;}
+table.results thead th{ background-color:#ccc; line-height: 18px; text-align: left; padding: 3px 2px; }
+table.results tbody td{ border-bottom: 1px solid #aaa; padding: 3px 6px;}
+
+table.results thead th{ border-left: 1px solid #aaa;}
+table.results tbody td{ border-left: 1px solid #aaa;}
+
+table.results thead th:nth-child(2) { border-right: 2px double black;}
+table.results tbody td:nth-child(2) { border-right: 2px double black;}
+
+table.results thead th:nth-child(5) { border-right: 2px double black;}
+table.results tbody td:nth-child(5) { border-right: 2px double black;}
+
+table.results a.methodname{
+    white-space: nowrap;
+    width:200px;
+    display: block;
+}
+
+div.summary{
+    background-color: #c7c7c7;
+    border: 1px solid #999;
+    padding: 8px;
+}
+div.summary h2{
+    margin: 0px;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+div.summary p{
+    margin: 0px 5px;
+    display: inline-block;
+}
+
+div.navigation {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    background-color: #d8d7d7;
+    border: 1px solid #999;
+    border-top:none;
+    border-bottom:none;
+    padding: 2px 20px;
+    margin: 0px;
+}
+
+
+
+.pure-button {
+    /* Structure */
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.pure-button {
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+    /* csslint ignore:start */
+    filter: alpha(opacity=90);
+    /* csslint ignore:end */
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    text-decoration: none;
+    
+}
+.pure-button:focus {
+    outline: 0;
+}
+.pure-button-active,
+.pure-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000000;
+}
+
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+    border: none;
+    background-image: none;
+    /* csslint ignore:start */
+    filter: alpha(opacity=40);
+    /* csslint ignore:end */
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.pure-button-hidden {
+    display: none;
+}
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+}
+
+/* Button Groups */
+.pure-button-group .pure-button {
+    margin: 0;
+    border-radius: 0;
+    border-right: 1px solid #111;  /* fallback color for rgba() for IE7/8 */
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.pure-button-group .pure-button:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.pure-button-group .pure-button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: none;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white !important;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+table.results .pure-button{
+    font-size: 8pt;
+}
+
+
+
+p.info{
+    margin: -10px -10px;
+    margin-bottom: 10px;
+    border: 1px solid #dad55e;
+    background: #fffa90;
+    color: #777620;
+}
+
+fieldset{
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+fieldset legend{
+    border: 1px solid #ccc;
+    color:#000;
+    padding:4px 8px;
+    background-color: #ddd;
+
+}
+
+#div_instructions{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#div_instructions div.wrap{
+    background-color: #ececec;
+    border: 2px solid #4c4c4c;
+    padding: 10px;
+    color: #2b2b2b;
+    max-width: 600px;
+}
+
+#div_instructions h1{
+    background-color:#9E9E9E;
+}
+#div_instructions button.close{
+    float: right;
+    margin-top: -6px;
+}
+
+.hidden{
+    display: none !important;
+}

@@ -1,0 +1,139 @@
+#div_canvas_gt{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 30px;
+    bottom: 0px;    
+}
+#div_canvas_det{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 30px;
+    bottom: 0px; 
+}
+
+
+div.container_canvas{
+    width: 50%;
+    vertical-align: top;
+    position: relative;
+    height: 400px;
+    display: inline-block;  
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+div.container_canvas h3, #div_sample_info h3{
+    margin: 0px;
+    padding: 0px 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #999;
+    line-height: 29px;
+}
+
+
+#img_gt_image2{
+    display: none;
+}
+
+.div_sample_info{
+    display: flex;
+}
+
+#div_matrices{
+    flex-grow: 2;
+}
+
+#div_recall{
+    flex-grow: 2;
+}
+
+#div_precision{
+    width: 100%;
+}
+
+#div_detail {
+    width: 100%;
+}
+
+#div_recall_det {
+    flex-grow: 2;
+}
+
+#div_precision_det {
+    flex-grow: 2;
+}
+
+#div_recall_e2e {
+    flex-grow: 2;
+}
+
+#div_precision_e2e {
+    flex-grow: 2;
+}
+
+#div_char{
+    flex-grow: 2;
+}
+
+.div_table{
+    display: block;
+}
+.div_table{
+    display: block;
+    box-sizing: border-box;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.div_log{
+    height: 300px;
+    font-size: 15px;
+    overflow: auto;
+}
+
+.div_table table{
+    border-collapse: collapse;
+    border-style: hidden;
+    font-size: 12px;
+    padding: 2px;
+    border-spacing: 2px 2px;
+}
+.div_table td{
+    text-align: center;
+    width:24px;
+}
+.div_table td, th{
+    border: 1px solid black;
+}
+
+.div_table td.row_selected{
+    background-color: #ccc;
+}
+.div_table td.col_selected{
+    background-color: #ccc;
+}
+
+.div_table td.selected{
+    background-color: #888;
+}
+
+.div_table td.OO{
+    background-color: rgb(0,190,0);
+}
+
+.div_table td.NO{
+    background-color: rgb(38,148,232);
+    color: #c8e6c9;
+}
+
+.div_table td.OM{
+    background-color: rgb(38,148,232);
+}
+.div_table td.MO{
+    background-color: rgb(247,169,34);
+}
+
+.div_table td.OO.green{
+    color: #006E24;
+}

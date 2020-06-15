@@ -1,0 +1,182 @@
+#div_sample{
+    position: relative;
+}
+div.filter {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 2px 20px;
+    margin-bottom: 6px;
+}
+div.im_filters{
+    position: absolute;
+    left:160px;
+    top:5px;
+    z-index: 9;
+}
+
+div.im_filters.det{
+    left:50%;
+    margin-left:160px;
+}
+
+div.overlay_filters {
+    position: absolute;
+    left:280px;
+    top:5px;
+    z-index: 9;
+}
+
+div overlay_filters.det {
+    left:50%;
+    margin-left:280px;
+}
+
+div.filter #span_evaluation_nav{
+    margin-left: 20px;
+}
+div.filter #span_evaluation_nav a{
+    margin: 0px 4px;
+}
+
+div.method_info{
+    background-color: #f2f2f2;
+    margin: 20px 0px;
+    padding: 0px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    border: 1px solid #999;
+}
+div.method_info.small{
+    box-shadow: none;
+}
+
+
+h2.method{
+    background-color: #d8d8d8;
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #999;
+    padding-left: 10px;
+    
+    margin: 0px;
+}
+div.method_info span.method{
+    color:#666;font-size:12pt;
+}
+
+h2.method.competition{
+    background-color: #e1f5fe;
+}
+
+div.method_info.small h2.method.competition img{
+    width: 16px; height: 16px;
+}
+
+#div_summary{
+    padding: 10px;
+}
+
+div.top{
+    display: flex;
+    justify-content:space-between;
+}
+
+div.top.methods_list{
+    flex-wrap: wrap;
+}
+div.top.methods_list div.method_info{
+    flex-basis: 32%;
+    margin: 0.5%;
+}
+
+div.method_info.small{
+    flex-basis: 33%;
+    width:33%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.method_info.small #div_summary{
+    box-shadow: none;
+    font-size: 8pt;
+}
+div.method_info.small h2.method{
+    box-shadow:none;
+    font-size: 10pt;
+    
+    
+}
+div.method_info.small h2.method a{
+    color: #2694E8;
+    text-decoration: none;
+}
+div.method_info.small h2.method a:hover{ color:#F6A828}
+
+div.method_info.small span.method{
+    color:#666;font-size:8pt;
+}
+
+
+#div_comparation{
+    /*padding: 10px;
+    margin: 9px;
+    border: 1px solid #999;*/
+    max-height: 200px;
+    overflow: auto;
+    margin-bottom: 6px;
+}
+#div_comparation h3{
+    background-color: #eee;
+    margin: -10px;
+    padding: 6px 10px;
+    margin-bottom: 20px;
+}
+
+table.sample_methods{
+    border-collapse: collapse;
+}
+table.sample_methods td,table.sample_methods th{
+    border: 1px solid #aaa;
+    padding: 2px;
+    text-align: right;
+}
+table.sample_methods td.method,table.sample_methods th.method{
+    text-align: left;
+}
+table.sample_methods th{
+    background-color: #c7c7c7;
+}
+table.sample_methods tr.current td{
+    background-color: #FFC107;
+    font-weight: bold;
+}
+table.sample_methods td a{
+    text-decoration: none;
+    color: #2694E8;
+}
+
+.div_log{
+    font-size: 8pt;
+}
+
+div.group{
+    border:1px solid #c5c5c5;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+div.group div.header{
+    background-color: #dedede;
+    padding: 10px;
+    margin: -7px;
+    margin-bottom: 10px;
+    border:1px solid #c5c5c5;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+     line-height: 20px;
+}

@@ -1,0 +1,8 @@
+__pycache__/
+venv
+debug*
+tmp*
+.vscode
+.DS_Store
+.idea
+gt/image*
