@@ -120,7 +120,7 @@ class QUAD(Box):
         top_side = point_distance((self.points[0], self.points[1]), (self.points[2], self.points[3]))
         right_side = point_distance((self.points[2], self.points[3]), (self.points[4], self.points[5]))
         bottom_side = point_distance((self.points[4], self.points[5]), (self.points[6], self.points[7]))
-        left_side = point_distance((self.points[0], self.points[1]), (self.points[2], self.points[3]))
+        left_side = point_distance((self.points[6], self.points[7]), (self.points[0], self.points[1]))
         avg_hor = (top_side + bottom_side) / 2
         avg_ver = (right_side + left_side) / 2
 
