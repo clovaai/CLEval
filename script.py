@@ -106,9 +106,9 @@ class GlobalResult(object):
             self.chars_recog += sample_dict['chars_recog']
 
             self.e2e_char_missed += sample_dict['e2e_char_missed']
-            self.e2e_char_false_positive = sample_dict['e2e_char_false_positive']
-            self.e2e_recog_score_chars = sample_dict['e2e_recog_score_chars']
-            self.e2e_recog_score_correct_num = sample_dict['e2e_recog_score_correct_num']
+            self.e2e_char_false_positive += sample_dict['e2e_char_false_positive']
+            self.e2e_recog_score_chars += sample_dict['e2e_recog_score_chars']
+            self.e2e_recog_score_correct_num += sample_dict['e2e_recog_score_correct_num']
 
 
     def to_dict(self):
