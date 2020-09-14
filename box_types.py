@@ -124,7 +124,7 @@ class QUAD(Box):
         avg_hor = (top_side + bottom_side) / 2
         avg_ver = (right_side + left_side) / 2
 
-        return (avg_hor + 1e-5) / (avg_ver + 1e-5)
+        return (avg_ver + 1e-5) / (avg_hor + 1e-5)
 
     def pseudo_transcription_length(self):
         return min(round(0.5+(max(self.aspect_ratio(), 1/self.aspect_ratio()))), 10)
