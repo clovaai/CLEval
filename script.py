@@ -390,10 +390,12 @@ class SampleResult(object):
         """Calculate match matrix with PCC counting matrix information."""
         self.eval_log += "Find one-to-one matches\n"
         single_gt_ids = [gt_id for gt_id in range(len(self.gt_boxes)) \
-                         if np.sum((np.sum(self.pcc_count_matrix[gt_id], axis=-1) > 0)
+                         if gt_id not in self.gt_dont_care_indices \
+                         and np.sum((np.sum(self.pcc_count_matrix[gt_id], axis=-1) > 0)
                                    & (self.area_precision_matrix[gt_id] >= PARAMS.AREA_PRECISION_CONSTRAINT)) == 1]
         single_det_ids = [det_id for det_id in range(len(self.det_boxes)) \
-                          if np.sum((np.array([sum(i_arr[det_id]) for i_arr in self.pcc_count_matrix]) > 0)
+                          if det_id not in self.det_dont_care_indices \
+                          and np.sum((np.array([sum(i_arr[det_id]) for i_arr in self.pcc_count_matrix]) > 0)
                                     * (self.area_precision_matrix[:, det_id] >= PARAMS.AREA_PRECISION_CONSTRAINT)) == 1]
         for gt_id in single_gt_ids:
             for det_id in single_det_ids:
