@@ -1,4 +1,4 @@
-bottle==0.12.17
+bottle==0.12.19
 numpy==1.17.0
 Pillow==6.1.0
 Polygon3==3.0.8
