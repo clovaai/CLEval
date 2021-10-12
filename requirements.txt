@@ -5,5 +5,5 @@ Polygon3==3.0.8
 Shapely==1.6.4.post2
 six==1.12.0
 termcolor==1.1.0
-opencv-python==3.4.2.17
+opencv-python==4.2.0.32
 tqdm==4.40.0
