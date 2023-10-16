@@ -52,7 +52,7 @@ def get_params():
     # orientation evaluation
     parser.add_argument("--ORIENTATION", action="store_true")
 
-    # sub-set evaluation  (
+    # scale-wise evaluation  (
     parser.add_argument("--SCALE_WISE", action="store_true")  # scale-wise evaluation
     parser.add_argument("--SCALE_BINS", default=(0.0, 0.005, 0.01, 0.015, 0.02, 0.025, 0.1, 0.5, 1.0))
 

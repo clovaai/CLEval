@@ -75,15 +75,27 @@ $ cleval -g=gt/gt_TotalText.zip -s=[result.zip] --E2E --BOX_TYPE=POLY   # TotalT
   * Add ```--CONFIDENCES``` option if the result file contains confidence.
 
 ### TorchMetric
+```python
+from cleval import CLEvalMetric
+metric = CLEvalMetric()
 
+for gt, det in zip(gts, dets):
+    # your fancy algorithm
+    # ...
+    # gt_quads = ...
+    # det_quads = ...
+    # ...
+    _ = metric(det_quads, gt_quads, det_letters, gt_letters, gt_is_dcs)
+
+metric_out = metric.compute()
+metric.reset()
+```
 
 ### Profiling
 ```bash
 $ cleval -g=resources/test_data/gt/gt_eval_doc_v1_kr_single.zip -s=resources/test_data/pred/res_eval_doc_v1_kr_single.zip --E2E -v --DEBUG --PPROFILE > profile.txt
 $ PYTHONPATH=$PWD python cleval/main.py -g resources/test_data/gt/dummy_dataset_val.json -s resources/test_data/pred/dummy_dataset_val.json --SCALE_WISE --DOMAIN_WISE --ORIENTATION --E2E --ORIENTATION -v --PROFILE --DEBUG > profile.txt
 ```
-
-### Paramter list
 
 ### Paramters for evaluation script
 | name | type | default | description |
@@ -100,6 +112,9 @@ $ PYTHONPATH=$PWD python cleval/main.py -g resources/test_data/gt/dummy_dataset_
 | --E2E | ```boolean``` | ```False``` | to measure end-to-end evaluation (if not, detection evalution only) |
 | --CASE_SENSITIVE | ```boolean``` | ```True``` | set True to evaluate case-sensitively. (only used in end-to-end evaluation) |
 * Note : Please refer to ```arg_parser.py``` file for additional parameters and default settings used internally.
+
+* Note : For scalewise evaluation, we measure the ratio of the shorter length (text height) of the text-box to the longer length of the image. 
+Through this, evaluation for each ratio can be performed. To adjust the scales, please use SCALE_BINS argument.
 
 ## Citation
 ```
