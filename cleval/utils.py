@@ -1,9 +1,9 @@
 import codecs
+import json
 import re
 import subprocess
 import zipfile
 
-import json
 from numba import njit
 
 

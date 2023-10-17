@@ -2,8 +2,8 @@ from dataclasses import dataclass
 from typing import List
 
 import numpy as np
-from numpy.typing import NDArray
 from numba import njit
+from numpy.typing import NDArray
 
 from cleval.data import (
     DetBoxResult,
