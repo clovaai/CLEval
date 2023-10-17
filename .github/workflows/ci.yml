@@ -52,7 +52,7 @@ jobs:
     - name: Install pre-requirements
       run: sudo apt install -y libyajl2 libyajl-dev libleveldb-dev libgl1-mesa-glx libglib2.0-0
     - name: Install cleval
-      run: pip install six && pip install --force-reinstall --no-cache-dir cleval
+      run: pip install six && pip install --force-reinstall --no-cache-dir cleval opencv-python-headless
     - name: Install pytest
       run: pip install --upgrade pytest
     - name: Run pytest
