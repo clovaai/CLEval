@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cleval",
-    version="0.1.0",
+    version="0.1.1",
     author="dong.hyun",
     author_email="dong.hyun@navercorp.com",
     description="cleval",
@@ -23,11 +23,7 @@ setuptools.setup(
         "pprofile",
         "numba>=0.58.0",
         "six",
-        "yajl-py",
-        "cffi",
-        "plyvel",
         "torchmetrics>=1.2.0",
-        "torch",
         "numpy",
     ],
     classifiers=[
