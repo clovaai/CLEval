@@ -1,0 +1,59 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  black:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Upgrade pip
+      run: pip install --upgrade pip
+    - name: Install black
+      run: pip install --upgrade black==23.1.0
+    - name: Run black
+      run: black --check .
+
+  isort:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Upgrade pip
+      run: pip install --upgrade pip
+    - name: Install isort
+      run: pip install --upgrade isort==5.12.0
+    - name: Run isort
+      working-directory: ./cleval
+      run: isort --profile black --check .
+
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Upgrade pip
+      run: pip install --upgrade pip && pip install -U setuptools wheel
+    - name: Update apt
+      run: sudo apt update
+    - name: Install pre-requirements
+      run: sudo apt install -y libyajl2 libyajl-dev libleveldb-dev libgl1-mesa-glx libglib2.0-0
+    - name: Install cleval
+      run: pip install six && pip install --force-reinstall --no-cache-dir cleval opencv-python-headless
+    - name: Install pytest
+      run: pip install --upgrade pytest
+    - name: Run pytest
+      run: pytest
